@@ -17,6 +17,7 @@ const sendEmail = async (sender, email) => {
 		}
 		const transporter = map.get(sender.email);
 
+		console.log("email in sender: " + JSON.stringify(email));
 		const info = await transporter.sendMail(email);
 		const response = {
 			accepted: info.accepted,
@@ -107,7 +108,7 @@ module.exports = async function (context, req) {
 	}
 
 
-	if(validNotificationObject) {
+	if(validNotificationObject && req.body.notification) {
 		let notificationErrors = "";
 		try {
 			let notificationEmail = {};
