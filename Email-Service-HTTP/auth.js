@@ -1,11 +1,9 @@
-const bcrypt = require('bcrypt');
 const mailTransporters = require('./mailTransporters.js');
 
-const saltRounds = 10;
 const mapAuth = mailTransporters.mapAuth;
 
 const authorized = (passwordSent, passwordStored) => {
-	return bcrypt.compareSync(passwordSent, passwordStored);
+	return passwordSent === passwordStored
 }
 
 const authenticateSender = (sender) => {
