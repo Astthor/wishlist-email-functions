@@ -1,5 +1,5 @@
 const mailer = require('nodemailer');
-const acc = require('../local.settings.json');
+const acc = require('./gmail-accounts.json');
 
 /**
  * Temporary location in local settings.

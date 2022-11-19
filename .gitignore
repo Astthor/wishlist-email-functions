@@ -93,6 +93,9 @@ obj
 appsettings.json
 local.settings.json
 
+# Gmail settings
+gmail-accounts.json
+
 # Azurite artifacts
 __blobstorage__
 __queuestorage__
