@@ -131,7 +131,7 @@ module.exports = async function (context, req) {
 
 				successMessages.push("valid notification email");
 
-				const sender = {email: "notification"};
+				const sender = {email: "notification.wishlist@gmail.com"};
 				const notificationResponse = await sendEmail(sender, notificationEmail.success);
 
 				if(notificationResponse){
